@@ -1,0 +1,41 @@
+<project name="Demo" default="run" basedir=".">
+
+
+<property name="src.dir" value="src"/>
+<property name="bin.dir" value="bin"/>
+<property name="jar.dir" value="jar"/>
+<property name="war.dir" value="war"/>
+<property name="ear.dir" value="ear"/>
+
+
+<target name="run" depends="compile">
+		
+<echo>running!</echo>
+
+<jar destfile="${basedir}/jar/demo.jar" basedir="${basedir}/bin" >
+</jar>
+<war destfile="${basedir}/war/HWwar.war" webxml="${basedir}/WebContent/WEB-INF/web.xml">
+<fileset dir="${basedir}/WebContent">
+  </fileset>
+   <classes dir="${basedir}/WebContent"/>
+</war>
+ <ear destfile="${basedir}/ear/myapp.ear" appxml="${basedir}">
+      <fileset dir="${basedir}" includes="*.jar,*.war"/>
+    </ear>
+</target>
+<target name="compile" depends="create">
+<javac srcdir="${src.dir}" destdir="${bin.dir}"/>
+</target>
+<target name="create" depends="clean">
+<mkdir dir="${bin.dir}"/>
+<mkdir dir="${jar.dir}"/>
+<mkdir dir="${war.dir}"/>
+<mkdir  dir="${ear.dir}"/>
+</target>
+<target name="clean">
+<delete dir="${bin.dir}"/>
+<delete dir="${jar.dir}"/>
+<delete dir="${war.dir}"/>
+<delete  dir="${ear.dir}"/>		
+</target>
+</project>
