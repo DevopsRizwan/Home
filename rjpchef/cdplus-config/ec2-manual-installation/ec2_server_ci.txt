@@ -1,0 +1,125 @@
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk
+check java -version
+If it is not 1.7 then run the following command
+sudo update-alternatives --config java
+Select the right java version
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+
+sudo apt-get install maven
+check 
+mvn -version
+sudo vi  /usr/share/maven/conf/settings.xml
+Add
+ <server>
+      <id>snapshots</id>
+      <username>deployment</username>
+      <password>deployment123</password>
+    </server>
+    <server>
+      <id>releases</id>
+      <username>deployment</username>
+      <password>deployment123</password>
+    </server>
+
+
+sudo apt-get install subversion
+svn --help
+
+sudo apt-get install git
+git config --global user.name "dharmin-devops"
+git config --global user.email "dharmin.devops@gmail.com"
+
+
+sudo vi /etc/apt/sources.list
+Add entry 
+deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/
+sudo apt-get update
+sudo apt-get install sonar
+export SONAR_HOME=/opt/sonar
+Check sonar started properly at port 9000
+tail -1000f /opt/sonar/logs/sonar.log
+
+sudo mkdir /usr/share/rundeck
+cd /usr/share/rundeck/
+sudo wget http://download.rundeck.org/jar/rundeck-launcher-1.6.2.jar
+sudo nohup java -jar rundeck-launcher-1.6.2.jar > /dev/null 2>&1 &
+
+
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+
+Add plugins
+Dashboard View
+Copy Artifact Plugin
+Jenkins Sonar Plugin
+M2 Release Plugin
+RunDeck Plugin
+Git plugin
+Copy notifier plugin to the plugins directory
+sudo cp /home/ubuntu/cdplus/cdplus-notifier.hpi /var/lib/jenkins/plugins/
+
+Manage Jenkins --> Configure System
+Add JDK
+Name: java
+JAVA_HOME: /usr/lib/jvm/java-7-openjdk-amd64/
+
+Add Maven
+Name: maven
+MAVEN_HOME:  /usr/share/maven/
+
+Add Sonar
+Name: sonar
+Server URL: http://localhost:9000
+Sonar account login: admin
+Sonar account password: admin
+
+Rundeck
+URL: http://localhost:4440
+Login: admin
+Password: admin
+
+
+sudo mkdir /usr/share/nexus
+cd /usr/share/nexus/
+sudo wget http://www.sonatype.org/downloads/nexus-latest-bundle.tar.gz
+sudo tar xvzf nexus-latest-bundle.tar.gz
+sudo ln -s nexus-2.7.0-04/ nexus
+export NEXUS_HOME=/usr/share/nexus/nexus-2.7.0-04/
+sudo cp nexus-2.7.0-04/bin/nexus /etc/init.d/nexus
+sudo chmod 755 /etc/init.d/nexus
+sudo vi /etc/init.d/nexus
+Edit 
+NEXUS_HOME="/usr/share/nexus/nexus-2.7.0-04/"
+RUN_AS_USER=nexus
+PIDDIR="/usr/share/nexus/"
+/usr/share/nexus
+sudo adduser nexus
+sudo chown -R nexus /usr/share/nexus
+
+cd /etc/init.d
+update-rc.d nexus defaults
+service nexus start
+tail -f /usr/share/nexus/nexus-2.7.0-04/logs/wrapper.log
+
+Snapshots url: http://localhost:8081/nexus/content/repositories/snapshots/
+Releases url: http://localhost:8081/nexus/content/repositories/releases/
+
+
+sudo mkdir /usr/share/svnrepo
+cd /usr/share/svnrepo/
+sudo svnadmin create .
+mkdir ~/svnrepocheckout
+cd ~/svnrepocheckout
+svn checkout file:///usr/share/svnrepo/ .
+wget https://github.com/spring-projects/spring-petclinic/archive/master.zip
+unzip master.zip
+rm -rf master.zip
+svn add spring-petclinic-master
+sudo svn commit -m "Initial Commit"
+
+Copy cdplus notifier plugin with right service url to 

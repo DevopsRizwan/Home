@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agreement", "Agreement\Agreement.csproj", "{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agreement.BusinessEntity", "Agreement.BusinessEntity\Agreement.BusinessEntity.csproj", "{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agreement.BusinessLogic", "Agreement.BusinessLogic\Agreement.BusinessLogic.csproj", "{A7DA689A-9D62-41BB-B213-D23F0F094BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agreement.DataAccess", "Agreement.DataAccess\Agreement.DataAccess.csproj", "{A3B07A51-EEC4-485A-A9D5-C272395E71B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agreement.WebHelper", "Agreement.WebHelper\Agreement.WebHelper.csproj", "{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisteredVendorsService", "RegisteredVendorsService\RegisteredVendorsService.csproj", "{23643393-732C-40B3-82F8-44090716BE49}"
+EndProject
+Global
+	GlobalSection(VaultVsipSolution-v2) = preSolution
+		VaultHost = http://sweetu-hp/VaultService
+		VaultRepositoryID = 2
+		VaultRepositoryGUID = e7c62f3d-452b-4146-bd28-353a6e75cb23
+		ProjectCount = 6
+		ProjectRelativeDiskPath1 = Agreement\Agreement.csproj
+		ProjectRelativeDiskPath2 = Agreement.BusinessEntity\Agreement.BusinessEntity.csproj
+		ProjectRelativeDiskPath3 = Agreement.BusinessLogic\Agreement.BusinessLogic.csproj
+		ProjectRelativeDiskPath4 = Agreement.DataAccess\Agreement.DataAccess.csproj
+		ProjectRelativeDiskPath5 = Agreement.WebHelper\Agreement.WebHelper.csproj
+		ProjectRelativeDiskPath6 = RegisteredVendorsService\RegisteredVendorsService.csproj
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DA689A-9D62-41BB-B213-D23F0F094BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DA689A-9D62-41BB-B213-D23F0F094BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DA689A-9D62-41BB-B213-D23F0F094BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DA689A-9D62-41BB-B213-D23F0F094BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B07A51-EEC4-485A-A9D5-C272395E71B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B07A51-EEC4-485A-A9D5-C272395E71B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B07A51-EEC4-485A-A9D5-C272395E71B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B07A51-EEC4-485A-A9D5-C272395E71B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23643393-732C-40B3-82F8-44090716BE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23643393-732C-40B3-82F8-44090716BE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23643393-732C-40B3-82F8-44090716BE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23643393-732C-40B3-82F8-44090716BE49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

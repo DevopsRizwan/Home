@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFCAAB20-AA97-41CD-AFD0-FBD8AA74FCF8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agreement</RootNamespace>
+    <AssemblyName>Agreement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AgreementType.aspx" />
+    <Content Include="Approval.aspx" />
+    <Content Include="Approvers.aspx" />
+    <Content Include="Eligibility.aspx" />
+    <Content Include="images\imagesCA76S9L9.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\progressbar1.jpg" />
+    <Content Include="Questionnaire.aspx" />
+    <Content Include="Questions.aspx" />
+    <Content Include="Sample1.aspx" />
+    <Content Include="SearchAgreement.aspx" />
+    <Content Include="Status.aspx" />
+    <Content Include="Templates\EmailTemplete.txt" />
+    <Content Include="GoToHome.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit1.png" />
+    <Content Include="images\edit2.png" />
+    <Content Include="images\layout_01.gif" />
+    <Content Include="images\layout_02.gif" />
+    <Content Include="images\layout_03.gif" />
+    <Content Include="images\layout_04.gif" />
+    <Content Include="images\layout_05.gif" />
+    <Content Include="images\layout_06.gif" />
+    <Content Include="images\layout_07.gif" />
+    <Content Include="images\layout_08.gif" />
+    <Content Include="images\layout_09.gif" />
+    <Content Include="images\layout_10.gif" />
+    <Content Include="images\layout_11.gif" />
+    <Content Include="images\layout_12.gif" />
+    <Content Include="images\layout_13.gif" />
+    <Content Include="images\layout_14.gif" />
+    <Content Include="images\layout_15.gif" />
+    <Content Include="images\layout_16.gif" />
+    <Content Include="images\layout_17.gif" />
+    <Content Include="images\layout_18.gif" />
+    <Content Include="images\layout_19.gif" />
+    <Content Include="images\layout_20.gif" />
+    <Content Include="images\layout_21.gif" />
+    <Content Include="images\layout_22.gif" />
+    <Content Include="images\layout_23.gif" />
+    <Content Include="images\layout_24.gif" />
+    <Content Include="images\layout_25.gif" />
+    <Content Include="images\layout_26.gif" />
+    <Content Include="images\layout_27.gif" />
+    <Content Include="images\layout_28.gif" />
+    <Content Include="images\layout_29.gif" />
+    <Content Include="images\layout_30.gif" />
+    <Content Include="images\layout_31.gif" />
+    <Content Include="images\layout_32.gif" />
+    <Content Include="images\layout_33.gif" />
+    <Content Include="images\layout_34.gif" />
+    <Content Include="images\layout_35.gif" />
+    <Content Include="images\layout_36.gif" />
+    <Content Include="images\layout_37.gif" />
+    <Content Include="images\layout_38.gif" />
+    <Content Include="images\layout_39.gif" />
+    <Content Include="images\layout_40.gif" />
+    <Content Include="images\layout_41.gif" />
+    <Content Include="images\layout_42.gif" />
+    <Content Include="images\layout_43.gif" />
+    <Content Include="images\layout_44.gif" />
+    <Content Include="images\layout_45.gif" />
+    <Content Include="images\layout_46.gif" />
+    <Content Include="images\layout_47.gif" />
+    <Content Include="images\layout_48.gif" />
+    <Content Include="images\layout_49.gif" />
+    <Content Include="images\layout_50.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="Navigator.ascx" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Submit.aspx" />
+    <Content Include="UserControls\AgreementTypeControl.ascx" />
+    <Content Include="UserControls\ApproverControl.ascx" />
+    <Content Include="UserControls\EligibilityControl.ascx" />
+    <Content Include="UserControls\WorkControl.ascx" />
+    <Content Include="Users.aspx" />
+    <Content Include="ViewAgreement.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VendorServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VendorServices\Vendors.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Work.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementMaster.Master.cs">
+      <DependentUpon>AgreementMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgreementMaster.Master.designer.cs">
+      <DependentUpon>AgreementMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementType.aspx.cs">
+      <DependentUpon>AgreementType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgreementType.aspx.designer.cs">
+      <DependentUpon>AgreementType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Approval.aspx.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Approval.aspx.designer.cs">
+      <DependentUpon>Approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Approvers.aspx.cs">
+      <DependentUpon>Approvers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Approvers.aspx.designer.cs">
+      <DependentUpon>Approvers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMaster.Master.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMaster.Master.designer.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eligibility.aspx.cs">
+      <DependentUpon>Eligibility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eligibility.aspx.designer.cs">
+      <DependentUpon>Eligibility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoToHome.aspx.cs">
+      <DependentUpon>GoToHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoToHome.aspx.designer.cs">
+      <DependentUpon>GoToHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navigator.ascx.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navigator.ascx.designer.cs">
+      <DependentUpon>Navigator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Questionnaire.aspx.cs">
+      <DependentUpon>Questionnaire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Questionnaire.aspx.designer.cs">
+      <DependentUpon>Questionnaire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Questions.aspx.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Questions.aspx.designer.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sample1.aspx.cs">
+      <DependentUpon>Sample1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sample1.aspx.designer.cs">
+      <DependentUpon>Sample1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAgreement.aspx.cs">
+      <DependentUpon>SearchAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchAgreement.aspx.designer.cs">
+      <DependentUpon>SearchAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Submit.aspx.cs">
+      <DependentUpon>Submit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Submit.aspx.designer.cs">
+      <DependentUpon>Submit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AgreementTypeControl.ascx.cs">
+      <DependentUpon>AgreementTypeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AgreementTypeControl.ascx.designer.cs">
+      <DependentUpon>AgreementTypeControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ApproverControl.ascx.cs">
+      <DependentUpon>ApproverControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ApproverControl.ascx.designer.cs">
+      <DependentUpon>ApproverControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EligibilityControl.ascx.cs">
+      <DependentUpon>EligibilityControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\EligibilityControl.ascx.designer.cs">
+      <DependentUpon>EligibilityControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WorkControl.ascx.cs">
+      <DependentUpon>WorkControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\WorkControl.ascx.designer.cs">
+      <DependentUpon>WorkControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAgreement.aspx.cs">
+      <DependentUpon>ViewAgreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAgreement.aspx.designer.cs">
+      <DependentUpon>ViewAgreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\VendorServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Work.aspx.cs">
+      <DependentUpon>Work.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Work.aspx.designer.cs">
+      <DependentUpon>Work.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\QuoteDocs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgreementMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agreement.BusinessEntity\Agreement.BusinessEntity.csproj">
+      <Project>{4F4986F1-3FFF-4E6C-8BA3-402BDA20A329}</Project>
+      <Name>Agreement.BusinessEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agreement.BusinessLogic\Agreement.BusinessLogic.csproj">
+      <Project>{A7DA689A-9D62-41BB-B213-D23F0F094BB3}</Project>
+      <Name>Agreement.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agreement.WebHelper\Agreement.WebHelper.csproj">
+      <Project>{1773B482-CC5C-4133-AE7A-EFD3A9C25C60}</Project>
+      <Name>Agreement.WebHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoginMaster.Master" />
+    <None Include="Web References\VendorServices\Vendors.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:33092/Vendors.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VendorServices\</RelPath>
+      <UpdateFromURL>http://localhost:33092/Vendors.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Agreement_VendorServices_Vendors</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4682</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

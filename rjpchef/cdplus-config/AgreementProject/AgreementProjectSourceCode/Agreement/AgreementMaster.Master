@@ -1,0 +1,168 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AgreementMaster.master.cs"
+    Inherits="AgreementWeb.AgreementMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>eAgreement Application</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <form id="form1" runat="server">
+    <table border="0" align="center" cellpadding="0" cellspacing="0" style="width: 80%;
+        background-color: #DCDCDC; padding-left: 2px; padding-right: 2px;">
+        <tr>
+            <td style="background-color: White;">
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="91px" style="width: 100%; background-image: url(images/layout_02.gif);
+                            vertical-align: middle; padding-left: 3px; white-space: nowrap;">
+                            <table width="100%">
+                                <tr>
+                                    <td width="20%">
+                                        <img src="images/logo.jpg" alt="" height="100" width="100" />
+                                    </td>
+                                    <td width="60%" style="font-size: x-large; font-weight: bold;text-align:center;">
+                                        eAgreement Application
+                                    </td>
+                                    <td width="20%" style="text-align: right;padding-right:10px;font-weight:bold">
+                                        <strong>Welcome:</strong>&nbsp;&nbsp;<asp:Label ID="lblUser" runat="server"></asp:Label>&nbsp;|&nbsp;<asp:LinkButton
+                                            ID="lnkbtnLogout" runat="server" onclick="lnkbtnLogout_Click">Logout</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="8" style="width: 100%">
+                            <img src="images/layout_04.gif" width="100%" height="8" alt=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="38" style="vertical-align: middle;">
+                            <table width="100%" cellpadding="0" cellspacing="1" style="height: 100%;">
+                                <tr>
+                                    <td class="menustyle">
+                                        <a href="Home.aspx" style="font-weight: bold">HOME</a>
+                                    </td>
+                                    <td class="menusep">
+                                    </td>
+                                    <td class="menustyle"> 
+                                        <asp:LinkButton ID="lnkCreateAgreement" runat="server" 
+                                            onclick="lnkCreateAgreement_Click"><strong>CREATE AGREEMENT</strong> </asp:LinkButton>
+                                    <%--  <a href="AgreementType.aspx" style="font-weight: bold">CREATE AGREEMENT</a>--%>
+                                    </td>
+                                    <td class="menusep">
+                                    </td>
+                                    <td class="menustyle">
+                                        <a href="SearchAgreement.aspx" style="font-weight: bold">SEARCH</a>
+                                    </td>
+                                    <td class="menusep">
+                                    </td>
+                                    <td class="menustyle">
+                                        <a href="#" style="font-weight: bold">NEWS</a>
+                                    </td>
+                                    <td class="menusep">
+                                    </td>
+                                     <td class="menustyle">
+                                        <a id="ahrManageUsers" runat="server" href="Users.aspx" style="font-weight: bold">MANAGE USERS</a>
+                                    </td>
+                                    </td>
+                                     <td class="menustyle">
+                                        <a id="ahrQuestions" runat="server" href="Questions.aspx" style="font-weight: bold">QUESTIONS</a>
+                                    </td>
+                                    <td class="menustyle">
+                                        <a id="a1" runat="server" href="Questionnaire.aspx" style="font-weight: bold">QUESTIONNAIRE</a>
+                                    </td>
+                                    <td style="width: 60%" class="menustyle">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="8">
+                            <img src="images/layout_11.gif" width="100%" height="8" alt=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 400px; vertical-align: top; padding-left: 5px; padding-right: 5px;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="background-image: url(images/layout_30.gif); height: 40px; padding-left: 5px;">
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                        <asp:ContentPlaceHolder ID="contentPlsHldrMainPageTitle" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <asp:ContentPlaceHolder ID="contentPlsHldrMain" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                            <asp:UpdateProgress ID="UpdateProgress1" runat="server"
+                                                             DisplayAfter="0">
+                                                        <ProgressTemplate>
+                                                            <div style="background-color: Gray; filter:alpha(opacity=60); opacity:0.60; width: 100%; top: 0px; left: 0px; position: fixed; height: 100%;">
+                                                            </div>
+                                                              <div style="margin:auto;
+                                                                  font-family:Trebuchet MS;
+                                                                  filter: alpha(opacity=100);
+                                                                  opacity: 1;
+                                                                  font-size:small;
+                                                                  vertical-align: middle;
+                                                                  top: 45%;
+                                                                  position: fixed;
+                                                                  right: 45%;
+                                                                  color: #275721;
+                                                                  text-align: center;
+                                                                  background-color: White;
+                                                                  height: 100px;
+              
+                                                                  ">
+                                                                    <table style=" background-color: White; font-family: Sans-Serif; text-align: center; border: solid 1px #275721; color: #275721; width: inherit; height: inherit; padding: 15px;">
+                                                                    <tr>
+                                                                    <td style=" text-align: inherit;"><img src="../images/loading.gif" alt="Loading"  /></td>
+                                                                    <td style=" text-align: inherit;"><span style="font-family: Sans-Serif; font-size: medium; font-weight: bold; font">Loading...</span></td>
+                                                                    </tr>
+                                                                    </table>
+                                                            </div>
+                                                        </ProgressTemplate>
+                                                    </asp:UpdateProgress>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" height="13">
+                            <img src="images/layout_46.gif" width="100%" height="13" alt=""/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" background="images/layout_49.gif" height="23" style="text-align: center;">
+                            <b><a href="index.htm"><font size="1">HOME</font></a><font size="1">&nbsp; |&nbsp; </font>
+                                <a href="index.htm"><font size="1">CONTACT&nbsp; US</font></a><font size="1">&nbsp;
+                                    |&nbsp; </font><a href="index.htm"><font size="1">ABOUT US</font></a><font size="1">&nbsp;
+                                        |&nbsp; </font><a href="index.htm"><font size="1">POLICY</font></a><font size="1">&nbsp;
+                                            |&nbsp; </font><a href="index.htm"><font size="1">RESOURCE</font></a></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="13">
+                            <img src="images/layout_50.gif" width="100%" height="13" alt=""/>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

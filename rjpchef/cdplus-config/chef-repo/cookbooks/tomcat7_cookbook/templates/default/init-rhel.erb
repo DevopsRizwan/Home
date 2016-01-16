@@ -1,0 +1,35 @@
+#!/bin/bash  
+# description: Tomcat Start Stop Restart  
+#processname: tomcat
+# chkconfig: 234 20 80
+PATH=/bin:/usr/bin:/sbin:/usr/sbin::<%= node['tomcat7']['home'] %>/bin
+
+#setting Java home here. 
+JAVA_HOME=$JAVA_HOME
+export JAVA_HOME   
+PATH=$JAVA_HOME/bin:$PATH   
+export PATH
+
+# Directory where the Tomcat 7 binary distribution resides
+CATALINA_HOME=<%= node['tomcat7']['home'] %>
+
+# Directory for per-instance configuration files and webapps
+CATALINA_BASE=<%= node['tomcat7'][:base] %>
+
+PATH=$JAVA_HOME/bin:$PATH  
+export PATH  
+      
+case $1 in  
+    start)  
+        sh $CATALINA_HOME/bin/startup.sh  
+    ;;   
+    stop)     
+	sh $CATALINA_HOME/bin/shutdown.sh  
+    ;;   
+    restart)  
+	sh $CATALINA_HOME/bin/shutdown.sh  
+	sh $CATALINA_HOME/bin/startup.sh  
+    ;;   
+esac      
+exit 0  
+

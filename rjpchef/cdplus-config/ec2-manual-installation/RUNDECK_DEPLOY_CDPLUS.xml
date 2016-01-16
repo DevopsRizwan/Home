@@ -1,0 +1,32 @@
+<joblist>
+  <job>
+    <id>887b1b24-6fd9-42cb-add2-ad681692e4e0</id>
+    <loglevel>INFO</loglevel>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <scriptfile>/usr/share/apache-tomcat-7.0.47/bin/tomcat_deploy.sh</scriptfile>
+        <scriptargs>-h /usr/share/apache-tomcat-7.0.47 -p 9085 -r ${option.snapshotRepositoryId} -u ${option.snapshotRepositoryUrl} -g ${option.groupId} -a ${option.artifactId} -v LATEST -n cdplus-service:cdplus</scriptargs>
+      </command>
+    </sequence>
+    <description></description>
+    <name>RUNDECK_DEPLOY_CDPLUS</name>
+    <context>
+      <project>CDPlus</project>
+      <options>
+        <option name='artifactId' value='cdplus-service:cdplus-web'>
+          <description>artifactId</description>
+        </option>
+        <option name='groupId' value='com.cognizant.devops:com.cognizant.devops'>
+          <description>groupId</description>
+        </option>
+        <option name='snapshotRepositoryId' value='snapshots'>
+          <description>snapshotRepositoryId</description>
+        </option>
+        <option name='snapshotRepositoryUrl' value='http://localhost:8081/nexus'>
+          <description>snapshotRepositoryUrl</description>
+        </option>
+      </options>
+    </context>
+    <uuid>887b1b24-6fd9-42cb-add2-ad681692e4e0</uuid>
+  </job>
+</joblist>

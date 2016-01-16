@@ -1,0 +1,32 @@
+<joblist>
+  <job>
+    <id>a2cbf887-4e77-4a5f-8153-9c09a0ba5fbe</id>
+    <loglevel>INFO</loglevel>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <scriptfile>/usr/share/apache-tomcat-7.0.47/bin/tomcat_deploy.sh</scriptfile>
+        <scriptargs>-h /usr/share/apache-tomcat-7.0.47 -p 9085 -r ${option.snapshotRepositoryId} -u ${option.snapshotRepositoryUrl} -g ${option.groupId} -a ${option.artifactId} -v LATEST -n petclinic</scriptargs>
+      </command>
+    </sequence>
+    <description></description>
+    <name>RUNDECK_DEPLOY_PETCLINIC</name>
+    <context>
+      <project>CDPlus</project>
+      <options>
+        <option name='artifactId' value='spring-petclinic'>
+          <description>artifactId</description>
+        </option>
+        <option name='groupId' value='org.springframework.samples'>
+          <description>groupId</description>
+        </option>
+        <option name='snapshotRepositoryId' value='snapshots'>
+          <description>snapshotRepositoryId</description>
+        </option>
+        <option name='snapshotRepositoryUrl' value='http://localhost:8081/nexus'>
+          <description>snapshotRepositoryUrl</description>
+        </option>
+      </options>
+    </context>
+    <uuid>a2cbf887-4e77-4a5f-8153-9c09a0ba5fbe</uuid>
+  </job>
+</joblist>

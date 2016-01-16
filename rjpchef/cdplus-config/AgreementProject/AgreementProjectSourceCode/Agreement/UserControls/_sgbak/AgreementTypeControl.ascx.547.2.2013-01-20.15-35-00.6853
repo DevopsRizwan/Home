@@ -1,0 +1,75 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AgreementTypeControl.ascx.cs" Inherits="Agreement.UserControls.AgreementTypeControl" %>
+<table width="100%" id="tblContainer" runat ="server">
+       
+        <tr style="height: 30px" valign="top">
+            <td>
+                Select Agreement Type
+            </td>
+            <td>
+                <asp:RadioButtonList ID="rdoAgreementType" runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Value="R" Text="Registered Vendor"></asp:ListItem>
+                    <asp:ListItem Value="A" Text="Anonymous Agreement"></asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="valReqAgreementType" runat="server" ControlToValidate="rdoAgreementType"
+                    Display="Dynamic" ErrorMessage="Select Agreement Type" ForeColor="Red" SetFocusOnError="True"
+                    ValidationGroup="Next"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr style="height: 30px" valign="top">
+            <td>
+                Select Business Type
+            </td>
+            <td>
+                <asp:DropDownList ID="ddlBusinessType" runat="server">
+                <asp:ListItem value = "0" Text = "--Select--" Selected ="True"></asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="valReqBusinessType" runat="server" ControlToValidate="ddlBusinessType"
+                    Display="Dynamic" ErrorMessage="Select Business Type" ForeColor="Red" SetFocusOnError="True"
+                    ValidationGroup="Next"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top">
+                Title
+            </td>
+            <td>
+                <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="valReqTitle" runat="server" ControlToValidate="txtTitle"
+                    Display="Dynamic" ErrorMessage="Enter Title Value" ForeColor="Red" SetFocusOnError="True"
+                    ValidationGroup="Next"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top">
+                Select Work Type
+            </td>
+            <td>
+                <asp:RadioButtonList ID="rdoWorkType" runat="server">
+                    <asp:ListItem Value="W" Text="Contract Work"></asp:ListItem>
+                    <asp:ListItem Value="C" Text="Contractor"></asp:ListItem>
+                    <asp:ListItem Value="S" Text="Subcontract Services"></asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+            <td>
+                <asp:RequiredFieldValidator ID="valReqWorkType" runat="server" ControlToValidate="rdoWorkType"
+                    Display="Dynamic" ErrorMessage="Select Work Type" ForeColor="Red" SetFocusOnError="True"
+                    ValidationGroup="Next"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td colspan="2">
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />&nbsp;<asp:Button
+                    ID="btnNext" runat="server" Text="Next" OnClick="btnNext_Click" ValidationGroup="Next" />&nbsp;<asp:Button
+                        ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                <asp:HiddenField ID="hdnAgreementID" runat="server" Value="" />
+            </td>
+        </tr>
+    </table>

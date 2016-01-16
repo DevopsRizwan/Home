@@ -1,0 +1,59 @@
+
+ td, img
+        {
+            padding: 0px;
+            border-width: 0px;
+         
+        }
+        
+        .menustyle
+        {
+            width: 15%;
+            text-align: center;
+            white-space: nowrap;
+            background-image: url(../images/layout_10.gif);
+        }
+        .menusep
+        {
+            width: 2px;
+            background-color: #DCDCDC;
+        }
+        .buttoncss
+        {
+            background-image: url(../images/layout_30.gif);
+            border: 0px 0px 0px 0px;
+            height: 35px;
+            width:50px;
+        }
+        
+        .buttoncss:hover
+        {
+            background-image: url(../images/layout_30.gif);
+            border: 0px 0px 0px 0px;
+            font-weight: bold;
+        }
+        
+.headertext
+{
+height:25px;
+font-weight :bold;
+background-color:#E2E2E2;
+text-align :left;    }
+
+.rowstyle, .altrowstyle
+{
+    height:22px;
+}
+
+.altrowstyle
+{ background-color:#E0DCDE;
+    }
+a:active     {  font-family: Arial; font-size: 12px; color: #000000}
+a:link       {  font-family: Arial; font-size: 12px; color: #000000}
+a:visited    {  font-family: Arial; font-size: 12px; color: #000000}
+body         {  font-family: Arial; font-size: 12px; color: #000000}
+li           {  font-family: Arial; font-size: 12px; color: #000000}
+ol           {  font-family: Arial; font-size: 12px; color: #000000}
+table        {  font-family: Arial; font-size: 12px; color: #000000}
+td           {  font-family: Arial; font-size: 12px; color: #000000}
+.required{color:Red}

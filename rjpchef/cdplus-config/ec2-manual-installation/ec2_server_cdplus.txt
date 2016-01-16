@@ -1,0 +1,66 @@
+
+Server 2 configuration:
+
+sudo apt-get update
+sudo apt-get install openjdk-7-jdk
+check java -version
+If it is not 1.7 then run the following command
+sudo update-alternatives --config java
+Select the right java version
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+
+sudo apt-get install maven
+check 
+mvn -version
+
+
+sudo apt-get install git
+git config --global user.name "dharmin-devops"
+git config --global user.email "dharmin.devops@gmail.com"
+
+
+sudo apt-get install python-software-properties
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+sudo add-apt-repository 'deb http://mirror.i3d.net/pub/mariadb/repo/5.5/ubuntu precise main'
+
+sudo apt-get update
+sudo apt-get install mariadb-server
+Set root password as 'mariadb' when prompted for
+
+sudo vi /etc/mysql/my.cnf
+Change bind-address            = 0.0.0.0
+
+sudo service mysql restart
+
+Log into mariadb -
+mysql -u root -p
+Once logged in execute the following SQLs
+create database cdplus;
+create user 'cdplus'@'%' identified by 'cdplus';
+GRANT ALL PRIVILEGES ON cdplus.* TO 'cdplus'@'%';
+
+
+sudo apt-get install tomcat7 tomcat7-admin
+tail -f /var/log/tomcat7/catalina.out
+sudo vi /usr/share/tomcat7/bin/catalina.sh
+Add this line
+JAVA_OPTS="$JAVA_OPTS -DCDPLUS_CONFIG_HOME=/home/ubuntu/cdplus"
+
+Copy application properties to /home/ubuntu/cdplus
+Edit as necessary
+chmod -R 777 cdplus
+
+mkdir ~/cdplus-repo
+cd ~/cdplus-repo/
+git clone https://github.com/CogDOPlus/cdplus.git
+cd cdplus/jenkins-java-client/
+mvn clean install -Dmaven.test.skip=true -Dmaven.compiler.source=1.7  -Dmaven.compiler.target=1.7
+cd cdplus/cdplus-service/
+mvn clean install -Dmaven.test.skip=true -Dmaven.compiler.source=1.7  -Dmaven.compiler.target=1.7
+cd cdplus/cdplus-web/
+mvn clean install -Dmaven.test.skip=true -Dmaven.compiler.source=1.7  -Dmaven.compiler.target=1.7
+
+sudo service tomcat7 stop
+sudo cp cdplus/cdplus-service/target/cdplus-service.war /var/lib/tomcat7/webapps/
+sudo cp cdplus/cdplus-web/target/cdplus.war /var/lib/tomcat7/webapps/

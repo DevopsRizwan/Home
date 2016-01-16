@@ -1,0 +1,7 @@
+DEPENDENCIES
+  jenkins_job_creation_cookbook1
+    path: .
+    metadata: true
+
+GRAPH
+  jenkins_job_creation_cookbook1 (0.1.0)

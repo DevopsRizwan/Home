@@ -1,0 +1,27 @@
+#!/bin/bash
+#set -x
+#export DISPLAY=:99
+xvfb_status=`ps -ef | grep [X]vfb`
+if [[ -z $xvfb_status ]]; then
+sudo Xvfb :99 -ac &
+sleep 5
+else
+echo ******************************
+echo "xvfb process already running"
+echo ******************************
+fi
+selenium_status=`ps -ef | grep [s]elenium-server`
+if [[ -z $selenium_status ]]; then
+java -jar selenium-server-standalone-2.45.0.jar -role hub &
+sleep 5
+java -jar selenium-server-standalone-2.45.0.jar -role node  -hub http://10.121.48.143:4444/grid/register &
+sleep 5
+else
+echo ******************************
+echo "selenium process already running"
+echo ******************************
+fi
+echo "*****************************"
+ifconfig
+echo "*****************************"
+

@@ -1,0 +1,11 @@
+Configurable tomcat deployment script. Can deploy multiple wars in a multi module build to the same server.
+Script Usage
+-h tomcat server location
+-p tomcat port
+-u repositoryUrl
+-r repositoryId
+-g groupIds (separated by :)
+-a artifactIds (separated by :)
+-n packageName (war file name)
+
+sudo /usr/share/apache-tomcat-7.0.47/bin/tomcat_deploy.sh -h /usr/share/apache-tomcat-7.0.47 -p 9085 -r snapshots -u http://localhost:8081/nexus/service/local/artifact/maven/redirect -g com.cognizant.devops:com.cognizant.devops -a cdplus-service:cdplus-web -v LATEST -n cdplus-service:cdplus

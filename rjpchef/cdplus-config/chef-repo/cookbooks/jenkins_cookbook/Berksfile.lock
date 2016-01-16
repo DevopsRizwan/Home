@@ -1,0 +1,9 @@
+DEPENDENCIES
+  jenkins_cookbook
+    path: .
+    metadata: true
+
+GRAPH
+  jenkins_cookbook (0.1.0)
+    yum (~> 3.0)
+  yum (3.6.0)

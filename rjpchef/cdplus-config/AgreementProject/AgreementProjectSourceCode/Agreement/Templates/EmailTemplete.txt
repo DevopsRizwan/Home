@@ -1,0 +1,30 @@
+﻿<p>
+        <br />
+        Dear User,</p>
+    <p>
+	<br/>
+        Your Agreement [AGREEMENT_TITLE] was rejected by [APPROVER_NAME].</p>
+    <p>
+        Please login to application and make necessary changes and resubmit it for 
+        approval.
+    </p>
+    <table width='100%'>
+        <tr>
+            <td width='25%'>
+                <b>Comments:</b></td>
+            <td width='75%'>
+                <b>[COMMENTS]</b></td>
+        </tr>
+        <tr>
+            <td>
+                <b>Corrective Actions:</b></td>
+            <td>
+                <b>[ACTIONS]</b></td>
+        </tr>
+    </table>
+    <p>
+	<br/>
+	<br/>
+        Thanks,</p>
+    <p>
+        eAgreement Team</p>

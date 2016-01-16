@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Inside the script"
+job_dir=$1
+path_to_default_dir=$2
+endpoint=$3
+
+echo "###1" $job_dir
+echo "###2" $path_to_default_dir
+echo "###3" $endpoint
+
+job_config_name=`echo "${job_dir##*_}"`
+echo $job_config_name
+config_xml=`find $path_to_default_dir -name $job_config_name* -print`
+echo $config_xml
+echo "Inside the script222"
+pwd
+cd /var/cache/jenkins/war/WEB-INF/
+java -jar jenkins-cli.jar -s $endpoint create-job $job_dir < $config_xml

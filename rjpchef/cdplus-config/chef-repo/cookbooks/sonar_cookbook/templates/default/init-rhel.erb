@@ -1,0 +1,22 @@
+#!/bin/bash  
+# description: sonar Start Stop Restart  
+# processname: sonar
+# chkconfig: 345 20 80
+
+SONAR_PATH=/opt/sonar/bin/<%= node['sonar']['os_kernel']%> 
+       
+case $1 in  
+    start)  
+        sh $SONAR_PATH/sonar.sh start
+    ;;   
+    stop)     
+	sh $SONAR_PATH/sonar.sh stop
+    ;;   
+    restart)  
+	sh $SONAR_PATH/sonar.sh restart
+    ;;
+    status)  
+	sh $SONAR_PATH/sonar.sh status
+    ;;   
+esac      
+exit 0  

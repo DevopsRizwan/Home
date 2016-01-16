@@ -1,0 +1,7 @@
+DEPENDENCIES
+  mysql_cookbook
+    path: .
+    metadata: true
+
+GRAPH
+  mysql_cookbook (0.2.0)
